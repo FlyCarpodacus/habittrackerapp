@@ -14,6 +14,8 @@
 		B411AC1920D6B38A00EB5E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B411AC1720D6B38A00EB5E02 /* LaunchScreen.storyboard */; };
 		B411AC2420D6B38A00EB5E02 /* habittrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411AC2320D6B38A00EB5E02 /* habittrackerTests.swift */; };
 		B411AC2F20D6B38A00EB5E02 /* habittrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411AC2E20D6B38A00EB5E02 /* habittrackerUITests.swift */; };
+		B411AC3D20D6BF8900EB5E02 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411AC3C20D6BF8900EB5E02 /* HabitTableViewCell.swift */; };
+		B411AC3F20D6C20700EB5E02 /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411AC3E20D6C20700EB5E02 /* AddHabitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		B411AC2A20D6B38A00EB5E02 /* habittrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = habittrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B411AC2E20D6B38A00EB5E02 /* habittrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habittrackerUITests.swift; sourceTree = "<group>"; };
 		B411AC3020D6B38A00EB5E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B411AC3C20D6BF8900EB5E02 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
+		B411AC3E20D6C20700EB5E02 /* AddHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				B411AC0E20D6B38A00EB5E02 /* AppDelegate.swift */,
 				B411AC1020D6B38A00EB5E02 /* ViewController.swift */,
 				B411AC1220D6B38A00EB5E02 /* Main.storyboard */,
+				B411AC3E20D6C20700EB5E02 /* AddHabitViewController.swift */,
+				B411AC3C20D6BF8900EB5E02 /* HabitTableViewCell.swift */,
 				B411AC1520D6B38A00EB5E02 /* Assets.xcassets */,
 				B411AC1720D6B38A00EB5E02 /* LaunchScreen.storyboard */,
 				B411AC1A20D6B38A00EB5E02 /* Info.plist */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B411AC1120D6B38A00EB5E02 /* ViewController.swift in Sources */,
+				B411AC3D20D6BF8900EB5E02 /* HabitTableViewCell.swift in Sources */,
 				B411AC0F20D6B38A00EB5E02 /* AppDelegate.swift in Sources */,
+				B411AC3F20D6C20700EB5E02 /* AddHabitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

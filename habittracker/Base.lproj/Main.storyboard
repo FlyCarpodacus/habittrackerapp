@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1kn-gO-x5Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,124 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="habittracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3R8-57-Lma">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_2" id="apF-2B-Z5u" customClass="HabitTableViewCell" customModule="habittracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="apF-2B-Z5u" id="BRv-8Q-hdg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwY-js-TMy">
+                                                    <rect key="frame" x="10" y="10" width="355" height="23.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dwY-js-TMy" firstAttribute="leading" secondItem="BRv-8Q-hdg" secondAttribute="leading" constant="10" id="NdN-dP-p6s"/>
+                                                <constraint firstAttribute="trailing" secondItem="dwY-js-TMy" secondAttribute="trailing" constant="10" id="UE9-B6-OLv"/>
+                                                <constraint firstItem="dwY-js-TMy" firstAttribute="top" secondItem="BRv-8Q-hdg" secondAttribute="top" constant="10" id="YdS-H6-Exj"/>
+                                                <constraint firstAttribute="bottom" secondItem="dwY-js-TMy" secondAttribute="bottom" constant="10" id="tdD-26-mWz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="title" destination="dwY-js-TMy" id="sp4-ca-ZLm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3R8-57-Lma" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AJG-EP-Vu1"/>
+                            <constraint firstItem="3R8-57-Lma" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gh6-hx-Dg5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3R8-57-Lma" secondAttribute="bottom" id="rUj-Yj-RVS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3R8-57-Lma" secondAttribute="trailing" id="zni-SG-oih"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="S97-Vl-Kmv">
+                        <barButtonItem key="rightBarButtonItem" title="Add Habit" id="cRC-fL-jeR">
+                            <connections>
+                                <segue destination="C9d-MM-b1f" kind="show" identifier="Show AddHabitViewController" id="8IZ-5j-4xp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="3R8-57-Lma" id="EF2-a9-JWc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="345" y="88"/>
+        </scene>
+        <!--Add a Habit-->
+        <scene sceneID="HoH-bD-hwv">
+            <objects>
+                <viewController id="C9d-MM-b1f" customClass="AddHabitViewController" customModule="habittracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Bf-J4-Xs2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMf-mY-VyG">
+                                <rect key="frame" x="10" y="74" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gQf-Cv-lJd" firstAttribute="trailing" secondItem="aMf-mY-VyG" secondAttribute="trailing" constant="10" id="GsJ-OB-iwh"/>
+                            <constraint firstItem="aMf-mY-VyG" firstAttribute="top" secondItem="gQf-Cv-lJd" secondAttribute="top" constant="10" id="Hio-pr-lfM"/>
+                            <constraint firstItem="aMf-mY-VyG" firstAttribute="leading" secondItem="gQf-Cv-lJd" secondAttribute="leading" constant="10" id="c7Y-ay-2J8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gQf-Cv-lJd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Habit" id="AfN-IF-igI">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="NTH-TC-Zf2">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="C9d-MM-b1f" id="URV-l1-3IP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="habitNameField" destination="aMf-mY-VyG" id="iHX-TB-CMM"/>
+                        <outlet property="saveButton" destination="NTH-TC-Zf2" id="nDD-J6-HmY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOh-t3-bG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gwc-gR-mvl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1kn-gO-x5Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VG4-cT-iGq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o9G-YX-U4B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXZ-7Z-cez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="88"/>
         </scene>
     </scenes>
 </document>
